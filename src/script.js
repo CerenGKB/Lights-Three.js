@@ -62,7 +62,12 @@ ambientLightGui.add(ambientLight.position,'y',-5,5).name('Y')
 ambientLightGui.add(ambientLight.position,'z',-5,5).name('Z')
 ambientLightGui.add(ambientLight.rotation,'x',0,Math.PI).name('Rotate x')
 ambientLightGui.add(ambientLight.rotation,'y',0,Math.PI).name('Rotate y')
-
+const materialParamsA = {
+    ambientLightColor : ambientLight.color.getHex()
+}
+ambientLightGui.addColor(materialParamsA,'ambientLightColor')
+.onChange((value) => ambientLight.color.set(value))
+.name('Light Color')
 
 
 rectAreaLightGui.add(rectAreaLight,'intensity').min(0).max(1).step(0.01)
@@ -71,7 +76,12 @@ rectAreaLightGui.add(rectAreaLight.position,'y',-5,5).name('Y')
 rectAreaLightGui.add(rectAreaLight.position,'z',-5,5).name('Z')
 rectAreaLightGui.add(rectAreaLight.rotation,'x',0,Math.PI).name('Rotate x')
 rectAreaLightGui.add(rectAreaLight.rotation,'y',0,Math.PI).name('Rotate y')
-
+const materialParamsR = {
+    rectAreaColor : rectAreaLight.color.getHex()
+}
+rectAreaLightGui.addColor(materialParamsR,'rectAreaColor')
+.onChange((value) => rectAreaLight.color.set(value))
+.name('Light Color')
 
 directionalLightGui.add(directionalLight,'intensity').min(0).max(1).step(0.01)
 directionalLightGui.add(directionalLight.position,'x',-5,5).name('X')
@@ -79,6 +89,13 @@ directionalLightGui.add(directionalLight.position,'y',-5,5).name('Y')
 directionalLightGui.add(directionalLight.position,'z',-5,5).name('Z')
 directionalLightGui.add(directionalLight.rotation,'x',0,Math.PI).name('Rotate x')
 directionalLightGui.add(directionalLight.rotation,'y',0,Math.PI).name('Rotate y')
+const materialParamsD = {
+    directionalColor : directionalLight.color.getHex()
+}
+directionalLightGui.addColor(materialParamsD,'directionalColor')
+.onChange((value) => directionalLight.color.set(value))
+.name('Light Color')
+
 
 hemisphereLightGui.add(hemisphereLight,'intensity').min(0).max(1).step(0.01)
 hemisphereLightGui.add(hemisphereLight.position,'x',-5,5).name('X')
@@ -86,6 +103,13 @@ hemisphereLightGui.add(hemisphereLight.position,'y',-5,5).name('Y')
 hemisphereLightGui.add(hemisphereLight.position,'z',-5,5).name('Z')
 hemisphereLightGui.add(hemisphereLight.rotation,'x',0,Math.PI).name('Rotate x')
 hemisphereLightGui.add(hemisphereLight.rotation,'y',0,Math.PI).name('Rotate y')
+const materialParamsH = {
+    hemisphereLightColor : hemisphereLight.color.getHex()
+}
+hemisphereLightGui.addColor(materialParamsH,'hemisphereLightColor')
+.onChange((value) => hemisphereLight.color.set(value))
+.name('Light Color')
+
 
 pointLightGui.add(pointLight,'intensity').min(0).max(1).step(0.01)
 pointLightGui.add(pointLight.position,'x',-5,5).name('X')
@@ -93,7 +117,12 @@ pointLightGui.add(pointLight.position,'y',-5,5).name('Y')
 pointLightGui.add(pointLight.position,'z',-5,5).name('Z')
 pointLightGui.add(pointLight.rotation,'x',0,Math.PI).name('Rotate x')
 pointLightGui.add(pointLight.rotation,'y',0,Math.PI).name('Rotate y')
-
+const materialParamsP = {
+    pointLightColor : pointLight.color.getHex()
+}
+pointLightGui.addColor(materialParamsP,'pointLightColor')
+.onChange((value) => pointLight.color.set(value))
+.name('Light Color')
 
 spotLightGui.add(spotLight,'intensity').min(0).max(1).step(0.01)
 spotLightGui.add(spotLight.position,'x',-5,5).name('X')
@@ -101,7 +130,12 @@ spotLightGui.add(spotLight.position,'y',-5,5).name('Y')
 spotLightGui.add(spotLight.position,'z',-5,5).name('Z')
 spotLightGui.add(spotLight.rotation,'x',0,Math.PI).name('Rotate x')
 spotLightGui.add(spotLight.rotation,'y',0,Math.PI).name('Rotate y')
-
+const materialParamsL = {
+    spotLightColor : spotLight.color.getHex()
+}
+spotLightGui.addColor(materialParamsL,'spotLightColor')
+.onChange((value) => spotLight.color.set(value))
+.name('Light Color')
 
 
 /**
